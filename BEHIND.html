@@ -145,6 +145,12 @@ DOCTYPE html>
 
 /* 모바일 */
 @media (max-width: 768px) {
+    .text-box { width: 90%;
+        padding: 20px;
+        font-size: 12px;
+        bottom: 100px;
+    }
+
     .main-content {
         margin-top: -50px;
         padding: 0 20px;
@@ -154,6 +160,8 @@ DOCTYPE html>
         flex-direction: column; /* 가로 → 세로 */
         align-items: center;
         gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .profile-box-img {
@@ -194,6 +202,18 @@ DOCTYPE html>
         font-size: 12px;
     }
 }
+.text-box { position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 800px;
+    padding: 40px;
+    background-color: #111;
+    border: 1px solid #333;
+    color: #888;
+    box-sizing: border-box;
+    text-align: center;}
     </style>
 </head>
 <body>
@@ -221,7 +241,7 @@ DOCTYPE html>
     </div>
     <div class="divider"></div>
     <div style="clear: both;"></div>
-    <div style="
+    <div class="text-box">
     position: fixed; 
     bottom: 110px; 
     left: 50%; 
@@ -249,4 +269,4 @@ beautiful and intense energy into a web experience, focusing on the killers that
   <img src="version.png" class="footer-right">
 </div>
 </body>
-</html><!
+</html>!
