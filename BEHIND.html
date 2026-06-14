@@ -1,15 +1,10 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="kr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Behind the Fog</title>
     <style>
-
-       img {
-        max-width: 100%;
-        height: auto;
-       } 
         body {
             background-color: black;
             margin: 0;
@@ -98,9 +93,7 @@ DOCTYPE html>
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 0;
-    height: 100vh;
-    align-items: center;
+    margin-top: -350px; 
     padding-right: 0px;
 }
 
@@ -124,96 +117,7 @@ DOCTYPE html>
         left: 0;
         margin: auto;
     }
-    /* 태블릿 */
-@media (max-width: 1024px) {
-    .main-content {
-        margin-top: -150px;
-    }
-
-    .profile-area {
-        gap: 30px;
-    }
-
-    .profile-box-img {
-        width: 150px;
-    }
-
-    .footer-center {
-        width: 300px;
-    }
-}
-
-/* 모바일 */
-@media (max-width: 768px) {
-    .text-box { width: 90%;
-        padding: 20px;
-        font-size: 12px;
-        bottom: 100px;
-    }
-
-    .main-content {
-        margin-top: -50px;
-        padding: 0 20px;
-    }
-
-    .profile-area {
-        flex-direction: column; /* 가로 → 세로 */
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .profile-box-img {
-        width: 120px;
-    }
-
-    .info-img {
-        width: 80%;
-    }
-
-    .back-container {
-        left: 10px;
-        bottom: 10px;
-    }
-
-    .img-btn img {
-        width: 70px;
-    }
-
-    .footer-center {
-        width: 200px;
-    }
-
-    .footer-right {
-        width: 60px;
-        right: 10px;
-    }
-
-    .divider {
-        width: 90%;
-    }
-
-    /* 설명 박스 */
-    div[style*="position: fixed"] {
-        width: 90% !important;
-        padding: 20px !important;
-        bottom: 80px !important;
-        font-size: 12px;
-    }
-}
-.text-box { position: absolute;
-    bottom: 120px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    max-width: 800px;
-    padding: 40px;
-    background-color: #111;
-    border: 1px solid #333;
-    color: #888;
-    box-sizing: border-box;
-    text-align: center;}
+    
     </style>
 </head>
 <body>
@@ -241,8 +145,24 @@ DOCTYPE html>
     </div>
     <div class="divider"></div>
     <div style="clear: both;"></div>
-    <div class="text-box">
-"Welcome to my fan-made tribute to 'Dead by Daylight.' I wanted to translate the game's hauntingly 
+    <div style="
+    position: fixed; 
+    bottom: 110px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 70%; 
+    height: auto; 
+    max-height: 150px;
+    padding: 130px;
+    background-color: #111; 
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    z-index: 999;
+    box-sizing: border-box;
+"> "Welcome to my fan-made tribute to 'Dead by Daylight.' I wanted to translate the game's hauntingly 
 beautiful and intense energy into a web experience, focusing on the killers that fascinate me the most.
  Starting as a player and now finding my way through code, 
  it’s been an incredible experience to build something of my own. 
@@ -253,4 +173,4 @@ beautiful and intense energy into a web experience, focusing on the killers that
   <img src="version.png" class="footer-right">
 </div>
 </body>
-</html>!
+</html>
