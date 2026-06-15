@@ -28,16 +28,13 @@
 }
 
 .footer-center {
-  width: 450px;
-  height: auto;
+    width: 60vw;
+    max-width: 450px;
 }
 
 .footer-right {
-  position: absolute;
-  right: 20px;
-  bottom: 5px;
-  width: 80px;
-  height: auto;
+    width: 12vw;
+    max-width: 80px;
 }
 .fog-layer {
   position: fixed;
@@ -74,11 +71,10 @@
 
        /* 버튼 */
         .back-container {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 999;
-}
+            position: absolute;
+            left: 20px;
+            bottom: 26px;
+        }
 
         /* 버튼 이미지 */
         .img-btn img {
@@ -90,11 +86,13 @@
         .img-btn:hover img {
             filter: brightness(1.2);
         }
-       .main-content {
+        .main-content {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    align-items: center;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
 }
 
 .profile-area {
@@ -103,96 +101,67 @@
     gap: 60px;
 }
 
-.profile-area {
-    flex-wrap: wrap;
-    justify-content: center;
+.profile-box-img {
+    width: 20vw;
+    min-width: 120px;
+    max-width: 200px;
 }
 
-.profile-box-img {
-    width: 200px;
+  .divider {
+        width: 85vw;
+        height: 1px;
+        opacity: 0.3;
+        position: absolute;
+        background-color: #ffffff;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    
+    img {
     max-width: 100%;
     height: auto;
 }
 
-  .divider {
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-    
-    @media (max-width: 1200px) {
-
-    .profile-box-img {
-
-        width: 160px;
-
-    }
-
-    .info-images {
-
-        width: 240px;
-
-    }
+.profile-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
 }
 
-
-
-@media (max-width: 786px) {
-
-    .profile-box-img {
-
-        width: 110px;
-
-    }
-
-    .info-images {
-
-        width: 180px;
-
+/* 모바일 */
+@media (max-width: 768px) {
+    .profile-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 }
 
 .text-box {
-    width: 70%;
-    margin: 40px auto;
-    padding: 40px;
+    position: fixed;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 700px;
+
+    padding: 20px;
     background-color: #111;
     border: 1px solid #333;
+
     color: #888;
-    box-sizing: border-box;
     text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
-
-    .main-content {
-        margin-top: 40px;
-    }
-
-    .profile-area {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .profile-box-img {
-        width: 140px;
-    }
-
-    .text-box {
-        width: 90%;
-        padding: 20px;
-        font-size: 12px;
-        bottom: 80px;
-    }
-
-    .footer-center {
-        width: 250px;
-    }
-
-    .footer-right {
-        width: 50px;
+    .fog-layer {
+        animation-duration: 120s;
+        filter: blur(3px);
     }
 }
 
@@ -223,12 +192,13 @@
     </div>
     <div class="divider"></div>
     <div style="clear: both;"></div>
-    <div class="text-box"> "Welcome to my fan-made tribute to 'Dead by Daylight.' I wanted to translate the game's hauntingly 
+    <div class="text-box">
+"Welcome to my fan-made tribute to 'Dead by Daylight.' I wanted to translate the game's hauntingly 
 beautiful and intense energy into a web experience, focusing on the killers that fascinate me the most.
- Starting as a player and now finding my way through code, 
- it’s been an incredible experience to build something of my own. 
- I hope you enjoy exploring this fog as much as I enjoyed creating it."
- </div>
+Starting as a player and now finding my way through code, 
+it's been an incredible experience to build something of my own. 
+I hope you enjoy exploring this fog as much as I enjoyed creating it."
+</div>
  <div class="footer-info">
   <img src="review.png" class="footer-center">
   <img src="version.png" class="footer-right">
