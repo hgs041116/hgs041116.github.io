@@ -17,12 +17,26 @@ canvas {
     margin: 0 auto;
     background: #111;
 }
+
+#backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: #111;
+    color: white;
+    border: 1px solid #444;
+    text-decoration: none;
+}
+
 </style>
 </head>
 
 <body>
 
 <canvas id="game"></canvas>
+
+<a href="index.html" id="backBtn">메인으로</a>
 
 <script>
 const canvas = document.getElementById("game");
