@@ -159,6 +159,60 @@
     bottom: 80px;
 }
 
+@media (max-width: 768px) {
+
+    /* 전체 여백 정리 */
+    body {
+        align-items: flex-start;
+    }
+
+    /* 중앙 콘텐츠 위치 조정 */
+    .main-content {
+        margin-top: 15vh;
+        padding: 0 5vw;
+    }
+
+    /* 프로필 영역 세로 정렬 */
+    .profile-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* 이미지 크기 줄이기 */
+    .profile-box-img {
+        width: 40vw;
+        max-width: 180px;
+    }
+
+    /* 텍스트 박스 */
+    .text-box {
+        width: 90%;
+        font-size: 12px;
+        padding: 15px;
+        bottom: 70px; /* footer랑 안 겹치게 */
+    }
+
+    /* footer 중앙 이미지 */
+    .footer-center {
+        width: 70vw;
+        max-width: 300px;
+    }
+
+    /* version 위치 더 아래/오른쪽 */
+    .footer-right {
+        width: 60px;
+        right: 10px;
+        bottom: 5px;
+    }
+
+    /* fog 살짝 가볍게 */
+    .fog-layer {
+        filter: blur(3px);
+        animation-duration: 120s;
+    }
+}
+
     </style>
 </head>
 <body>
