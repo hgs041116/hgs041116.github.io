@@ -25,20 +25,16 @@
   z-index: 999;
   pointer-events: none;
   
-  /* 경계선 제거 - 두 개 겹쳐놓기 */
   background: 
     url('FOG.png') repeat-x, 
     url('FOG.png') repeat-x;
   
-  /* 첫 번째는 원래 크기, 높이를 조절 */
   background-size: auto 100%, auto 110%;
   
-  /* 아래쪽은 진하고 위로 갈수록 투명해지게 */
   -webkit-mask-image: linear-gradient(to top, black 30%, transparent 100%);
   mask-image: linear-gradient(to top, black 30%, transparent 100%);
 
   opacity: 1;
-  /* 살짝 경계선을 부드럽게 */
   filter: blur(3px); 
 
   animation: moveFog 80s linear infinite;
@@ -46,11 +42,9 @@
 
 @keyframes moveFog {
   from { 
-    /* 오른쪽에서 왼쪽으로 */
     background-position: 0 0, 500px 0; 
   }
   to { 
-    /* 두 레이어의 속도를 다르게 */
     background-position: -2000px 0, -3500px 0; 
   }
 }
@@ -124,10 +118,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.3s ease;   /* 추가 */
+    transition: transform 0.3s ease; 
 }
 
-/* ✅ 호버 효과 */
 .main-logo:hover {
     transform: translate(-50%, -50%) scale(1.1);
 }
@@ -138,18 +131,15 @@
 
 @media (max-width: 768px) {
 
-    /* 로고 크기 */
     .main-logo {
         width: 40%;
     }
 
-    /* 배경 로고 */
     .bg-logo {
         width: 120%;
         opacity: 0.2;
     }
 
-    /* 버튼 세로 정렬 */
     .btn-container {
         flex-direction: column;
         align-items: center;
@@ -161,7 +151,6 @@
         width: 60%;
     }
 
-    /* 안개 */
     .fog-layer {
         height: 100%;
         filter: blur(2px);
@@ -178,12 +167,10 @@
     transition: transform 0.3s ease;
 }
 
-/* 마우스 올렸을 때 */
 .main-logo:hover {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* 모바일 터치 느낌 */
 .main-logo:active {
     transform: translate(-50%, -50%) scale(1.05);
 }
@@ -229,13 +216,11 @@
 </div>
 <div class="btn-container">
 
-    <!-- 왼쪽 버튼 -->
     <a href="ENTER.html" class="img-btn">
         <img src="enter.png" style="width: 250px;"
         style="rotate: calc(0.03);">
     </a>
 
-    <!-- 오른쪽 버튼 -->
     <a href="BEHIND.html" class="img-btn">
         <img src="behind.png" style="width: 250px;"
         style="rotate: calc(0.03);">
@@ -244,7 +229,6 @@
 </div>
 
 <style>
-  /* 밝아지는 효과 */
     .img-btn img {
         filter: brightness(0.6);
         transition: 0.3s;

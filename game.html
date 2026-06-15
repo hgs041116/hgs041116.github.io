@@ -51,7 +51,6 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// 플레이어
 let player = {
     x: 50,
     y: canvas.height - 100,
@@ -63,11 +62,9 @@ let player = {
     grounded: false
 };
 
-// 장애물
 let obstacles = [];
 let frame = 0;
 
-// 점프
 document.addEventListener("keydown", () => {
     if (player.grounded) {
         player.dy = player.jump;
@@ -82,7 +79,6 @@ document.addEventListener("touchstart", () => {
     }
 });
 
-// 게임 루프
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -99,7 +95,6 @@ function gameLoop() {
     ctx.fillStyle = "white";
     ctx.fillRect(player.x, player.y, player.w, player.h);
 
-    // 장애물 생성
     if (frame % 100 === 0) {
         obstacles.push({
             x: canvas.width,
@@ -109,7 +104,6 @@ function gameLoop() {
         });
     }
 
-    // 장애물 이동
     for (let i = 0; i < obstacles.length; i++) {
         let o = obstacles[i];
         o.x -= 6;

@@ -33,24 +33,20 @@
   
   
   background-size: 200% 100%, auto 120%;
-  opacity: 1; /* 투명도 */
-  filter: blur(5px); /* 경계선 */
+  opacity: 1;
+  filter: blur(5px);
   
   animation: moveFogRightToLeft 80s linear infinite;
 }
 
 @keyframes moveFogRightToLeft {
   from { 
-    /* 오른쪽에서 시작 */
     background-position: 0 0, 800px 0; 
   }
   to { 
-    /* 왼쪽으로 무한 이동 */
     background-position: -2000px 0, -3200px 0; 
   }
 }
-
-        /* 버튼 */
         .back-container {
     position: fixed;
     left: 15px;
@@ -58,7 +54,6 @@
     z-index: 999;
 }
 
-        /* 밝아지는 효과 */
         .img-btn img {
             filter: brightness(0.6);
             transition: 0.3s;
@@ -141,56 +136,39 @@
     <body>
 
         <div class="fog-layer"></div>
-
-    <!-- 'KILLERS' 로고 -->
     <div class="header">
         <img src="KILLERS.png" alt="KILLERS" class="main-title">
     </div>
 
    <div class="character-grid">
-    <!-- 1번 -->
     <div class="card">
         <img src="CLOWN.png" alt="Character 1">
         <p>CLOWN</p>
     </div>
-
-    <!-- 2번 -->
     <div class="card">
         <img src="HUNTRESS.png" alt="Character 2">
         <p>HUNTRESS</p>
     </div>
-
-    <!-- 3번 -->
     <div class="card">
         <img src="DEMOGORGON.png" alt="Character 3">
         <p>DEMOGORGON</p>
     </div>
-
-    <!-- 4번 -->
     <div class="card">
         <img src="ANIMATRONIC.png" alt="Character 4">
         <p>ANIMATRONIC</p>
     </div>
-
-    <!-- 5번 -->
     <div class="card">
         <img src="ONI.png" alt="Character 5">
         <p>ONI</p>
     </div>
-
-    <!-- 6번 -->
     <div class="card">
         <img src="PYRAMID HEAD.png" alt="Character 6">
         <p>PYRAMID HEAD</p>
     </div>
-
-    <!-- 7번 -->
     <div class="card">
         <img src="UNKNOWN.png" alt="Character 7">
         <p>UNKNOWN</p>
     </div>
-
-    <!-- 8번 -->
     <div class="card">
         <img src="HILLBILLY.png" alt="Character 8">
         <p>HILLBILLY</p>

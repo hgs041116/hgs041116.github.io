@@ -8,8 +8,8 @@
         body {
     background-color: black;
     margin: 0;
-    min-height: 100vh;   /* 변경 */
-    overflow-x: hidden;  /* 변경 */
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .footer-info {
@@ -48,31 +48,25 @@
   
   
   background-size: 200% 100%, auto 120%;
-  opacity: 1; /* 투명도 */
-  filter: blur(5px); /* 경계선 */
+  opacity: 1;
+  filter: blur(5px);
   
   animation: moveFogRightToLeft 80s linear infinite;
 }
 
 @keyframes moveFogRightToLeft {
   from { 
-    /* 오른쪽에서 시작 */
     background-position: 0 0, 800px 0; 
   }
   to { 
-    /* 왼쪽으로 이동 */
     background-position: -2000px 0, -3200px 0; 
   }
 }
-
-       /* 버튼 */
         .back-container {
             position: absolute;
             left: 20px;
             bottom: 26px;
         }
-
-        /* 버튼 이미지 */
         .img-btn img {
             width: 100px;
             filter: brightness(0.6);
@@ -114,7 +108,6 @@
     gap: 60px;
 }
 
-/* 모바일 */
 @media (max-width: 768px) {
     .profile-area {
         flex-direction: column;
@@ -124,7 +117,7 @@
 }
 
 .text-box {
-   position: relative;   /* 변경 */
+   position: relative;
     margin: 40px auto;
     width: 80%;
     max-width: 700px;
@@ -153,53 +146,37 @@
 }
 
 @media (max-width: 768px) {
-
-    /* 전체 여백 정리 */
     body {
         align-items: flex-start;
     }
-
-    /* 중앙 콘텐츠 위치 조정 */
     .main-content {
         margin-top: 15vh;
         padding: 0 5vw;
     }
-
-    /* 프로필 영역 세로 정렬 */
     .profile-area {
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-
-    /* 이미지 크기 줄이기 */
     .profile-box-img {
         width: 40vw;
         max-width: 180px;
     }
-
-    /* 텍스트 박스 */
     .text-box {
         width: 90%;
         font-size: 12px;
         padding: 15px;
-        bottom: 70px; /* footer랑 안 겹치게 */
+        bottom: 70px;
     }
-
-    /* footer 중앙 이미지 */
     .footer-center {
         width: 70vw;
         max-width: 300px;
     }
-
-    /* version 위치 더 아래/오른쪽 */
     .footer-right {
         width: 60px;
         right: 10px;
         bottom: 5px;
     }
-
-    /* fog 살짝 가볍게 */
     .fog-layer {
         filter: blur(3px);
         animation-duration: 120s;
