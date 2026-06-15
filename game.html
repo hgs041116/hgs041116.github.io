@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Game</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background: #111;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="game"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// 플레이어
+let player = {
+    x: 50,
+    y: canvas.height - 100,
+    w: 40,
+    h: 40,
+    dy: 0,
+    gravity: 0.8,
+    jump: -15,
+    grounded: false
+};
+
+// 장애물
+let obstacles = [];
+let frame = 0;
+
+// 점프
+document.addEventListener("keydown", () => {
+    if (player.grounded) {
+        player.dy = player.jump;
+        player.grounded = false;
+    }
+});
+
+document.addEventListener("touchstart", () => {
+    if (player.grounded) {
+        player.dy = player.jump;
+        player.grounded = false;
+    }
+});
+
+// 게임 루프
+function gameLoop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // 플레이어 물리
+    player.dy += player.gravity;
+    player.y += player.dy;
+
+    if (player.y + player.h >= canvas.height) {
+        player.y = canvas.height - player.h;
+        player.dy = 0;
+        player.grounded = true;
+    }
+
+    ctx.fillStyle = "white";
+    ctx.fillRect(player.x, player.y, player.w, player.h);
+
+    // 장애물 생성
+    if (frame % 100 === 0) {
+        obstacles.push({
+            x: canvas.width,
+            y: canvas.height - 40,
+            w: 30,
+            h: 40
+        });
+    }
+
+    // 장애물 이동
+    for (let i = 0; i < obstacles.length; i++) {
+        let o = obstacles[i];
+        o.x -= 6;
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(o.x, o.y, o.w, o.h);
+
+        // 충돌
+        if (
+            player.x < o.x + o.w &&
+            player.x + player.w > o.x &&
+            player.y < o.y + o.h &&
+            player.y + player.h > o.y
+        ) {
+            alert("게임 오버");
+            location.reload();
+        }
+    }
+
+    frame++;
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+</script>
+
+</body>
+</html>
