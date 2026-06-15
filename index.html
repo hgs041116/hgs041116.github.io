@@ -116,6 +116,101 @@
         width: 60%;
     }
 }
+
+.main-logo {
+    width: 25%;
+    min-width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;   /* 추가 */
+}
+
+/* ✅ 호버 효과 */
+.main-logo:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.main-logo:active {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+    /* 로고 크기 */
+    .main-logo {
+        width: 40%;
+    }
+
+    /* 배경 로고 */
+    .bg-logo {
+        width: 120%;
+        opacity: 0.2;
+    }
+
+    /* 버튼 세로 정렬 */
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        bottom: 10%;
+    }
+
+    .img-btn img {
+        width: 60%;
+    }
+
+    /* 안개 */
+    .fog-layer {
+        height: 100%;
+        filter: blur(2px);
+    }
+}
+
+.main-logo {
+    width: 25%;
+    min-width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+
+/* 마우스 올렸을 때 */
+.main-logo:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* 모바일 터치 느낌 */
+.main-logo:active {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+    .main-logo {
+        width: 40%;
+    }
+
+    .bg-logo {
+        width: 120%;
+        opacity: 0.2;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        bottom: 10%;
+    }
+
+    .img-btn img {
+        width: 60%;
+    }
+}
+
     </style>
 </head>
 <body>
