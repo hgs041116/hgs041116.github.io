@@ -74,10 +74,11 @@
 
        /* 버튼 */
         .back-container {
-            position: absolute;
-            left: 20px;
-            bottom: 26px;
-        }
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 999;
+}
 
         /* 버튼 이미지 */
         .img-btn img {
@@ -93,8 +94,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: -350px; 
-    padding-right: 0px;
+    margin-top: 80px;
 }
 
 .profile-area {
@@ -103,10 +103,17 @@
     gap: 60px;
 }
 
+.profile-area {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .profile-box-img {
     width: 200px;
+    max-width: 100%;
     height: auto;
 }
+
   .divider {
         width: 85vw;
         height: 1px;
@@ -148,8 +155,58 @@
         width: 180px;
 
     }
-
 }
+
+.text-box {
+    position: fixed;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-height: 150px;
+    padding: 40px;
+    background-color: #111;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    .main-content {
+        margin-top: 40px;
+    }
+
+    .profile-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .profile-box-img {
+        width: 140px;
+    }
+
+    .text-box {
+        width: 90%;
+        padding: 20px;
+        font-size: 12px;
+        bottom: 80px;
+    }
+
+    .footer-center {
+        width: 250px;
+    }
+
+    .footer-right {
+        width: 50px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -177,24 +234,7 @@
     </div>
     <div class="divider"></div>
     <div style="clear: both;"></div>
-    <div style="
-    position: fixed; 
-    bottom: 110px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    width: 70%; 
-    height: auto; 
-    max-height: 150px;
-    padding: 130px;
-    background-color: #111; 
-    border: 1px solid #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #888;
-    z-index: 999;
-    box-sizing: border-box;
-"> "Welcome to my fan-made tribute to 'Dead by Daylight.' I wanted to translate the game's hauntingly 
+    <div class="text-box"> "Welcome to my fan-made tribute to 'Dead by Daylight.' I wanted to translate the game's hauntingly 
 beautiful and intense energy into a web experience, focusing on the killers that fascinate me the most.
  Starting as a player and now finding my way through code, 
  it’s been an incredible experience to build something of my own. 
